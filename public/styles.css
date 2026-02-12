@@ -1,0 +1,78 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+#status {
+  margin: 0.25rem 0 0;
+  color: #93c5fd;
+}
+
+.auth-panel,
+.actions,
+.keyboard {
+  display: grid;
+  gap: 0.5rem;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+button {
+  background: #2563eb;
+  border: none;
+  font-weight: 600;
+}
+
+.touchpad {
+  border: 2px dashed #475569;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #111827, #1f2937);
+  min-height: 45vh;
+  touch-action: none;
+  position: relative;
+}
+
+.touchpad::after {
+  content: 'Touchpad';
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+.actions {
+  grid-template-columns: repeat(3, 1fr);
+}

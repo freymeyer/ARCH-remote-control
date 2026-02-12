@@ -1,0 +1,23 @@
+{
+  "name": "arch-remote-control",
+  "version": "1.0.0",
+  "description": "Secure mobile-to-PC remote control over LAN using Node.js, Socket.IO, and RobotJS",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "qrcode-terminal": "^0.12.0",
+    "socket.io": "^4.8.1"
+  },
+  "optionalDependencies": {
+    "robotjs": "^0.6.0"
+  }
+}

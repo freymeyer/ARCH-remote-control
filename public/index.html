@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Secure Remote Touchpad</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Remote Touchpad</h1>
+        <p id="status">Disconnected</p>
+      </header>
+
+      <section class="auth-panel" id="authPanel">
+        <label for="tokenInput">Access token</label>
+        <input id="tokenInput" type="password" placeholder="Enter server token" autocomplete="off" />
+        <button id="connectBtn">Connect</button>
+      </section>
+
+      <section id="touchpad" class="touchpad" aria-label="Touchpad area"></section>
+
+      <section class="actions">
+        <button id="leftClickBtn">Left Click</button>
+        <button id="rightClickBtn">Right Click</button>
+        <button id="doubleClickBtn">Double Click</button>
+      </section>
+
+      <section class="keyboard">
+        <input id="keyboardInput" type="text" placeholder="Type and send text (optional)" maxlength="256" />
+        <button id="sendKeyboardBtn">Send</button>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
